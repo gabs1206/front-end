@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Travel to Island</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+  </head>
+  <body id="Iceland">
+
+    <section class="hero is-fullheight">
+        <!-- Hero head: will stick at the top -->
+        <div class="hero-head">
+          <header class="navbar">
+            <div class="container is-gapless">
+              <div class="navbar-brand">
+                <a class="navbar-item magnet">
+                  <img src="assets/img/logo.png" alt="Logo">
+                </a>
+ 
+                <span  class="navbar-burger magnet" data-target="navbarMenuHeroC">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </span>
+              </div>
+
+            </div>
+          </header>
+        </div>
+
+        <div class="is-overlay">
+            <div class="columns is-fullheight">
+                <div class="column is-4 is-video is-offset-8">
+                    <video autoplay muted loop id="IceVideo">
+                        <source src="assets/img/video.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+         </div>
+
+        <div class="hero-body is-gapless">
+          <div class="container has-text-centered">
+            <h1 class="title ice-title is-black magnet">ICELAND</h1>
+          </div>
+        </div>
+
+        <div id="IceMenu" class="content closed">
+            <div class="columns is-gapless is-mobile">
+                <div class="column is-6 is-6-mobile">
+                    <div class="columns is-gapless is-block is-gapless">
+                        <div class="column is-12 img-bg">
+                        </div>
+                        <div class="column is-12 columns is-gapless yellow-box-mobile ">
+                            <div class="column is-4 has-text-centered is-flex-direction-column is-justify-content-center is-align-items-center has-icons">
+                                
+                                
+                                <a href="#">
+                                   <img src="assets/img/facebook.gif" alt="">
+                                </a>
+
+                                <a href="#"><img src="assets/img/instagram.gif" alt=""></a>
+
+                            </div>
+                            <div class="column is-8 yellow-box is-hidden-cel">
+                                    <div class="is-warning ">
+                                    <p class="has-text-white has-text-centered">“Excellent service - emailed instructions, no hassle, car was ready as soon as we arrived.”</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6 is-6-mobile black-box">                  
+                    <div class="menu-lang">
+                        <a href="#">English</a> / <a href="#">Español</a>
+                    </div> 
+                    <ul class="menu-items">
+                        <li class="menu-item"><a href="#">Inicio</a></li>
+                        <li class="menu-item"><a href="#">Reservas</a></li>
+                        <li class="menu-item"><a href="#">Tours</a></li>
+                        <li class="menu-item"><a href="#">Nostros</a></li>
+                        <li class="menu-item"><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/fluffy-factory/magnet-mouse@latest/lib/magnet-mouse.min.js"></script>
+
+    <script>
+        let mm = new MagnetMouse({
+        magnet: {
+            element: '.magnet'
+        }
+        });
+
+        mm.init();
+
+
+    function toggleMenu(){
+    const menu = document.querySelector('#IceMenu');
+    const trigger = document.querySelector('.navbar-burger');
+    trigger.addEventListener('click', () => {
+        menu.classList.toggle('closed');
+        trigger.classList.toggle('active');
+    })
+    }
+
+    toggleMenu();
+
+
+    </script>
+
+  </body>
+</html>
